@@ -1,0 +1,54 @@
+{
+    "name": "get-things-done/types",
+    "description": "",
+    "keywords": [
+        "get-things-done",
+        "types"
+    ],
+    "homepage": "https://github.com/get-things-done/types",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Cao Minh Duc",
+            "email": "caominhduc31081@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GetThingsDone\\Types\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GetThingsDone\\Types\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GetThingsDone\\Types\\TypesServiceProvider"
+            ],
+            "aliases": {
+                "Types": "GetThingsDone\\Types\\TypesFacade"
+            }
+        }
+    }
+}
