@@ -42,4 +42,9 @@ abstract class TypeAbstract implements CastsAttributes
     {
         return trans( 'types:name' )[ $this->getAlias() ] ?? class_basename( static::class );
     }
+
+    public function getDefaultRules(): array
+    {
+        return [];
+    }
 }
