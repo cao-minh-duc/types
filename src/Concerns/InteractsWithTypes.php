@@ -5,7 +5,7 @@ use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
 trait InteractsWithTypes
 {
-    protected $attributeNames = [];
+    // protected $attributeNames = [];
     
     public function getAttributeNamesDefault(): array
     {
@@ -27,7 +27,7 @@ trait InteractsWithTypes
     {
         return array_merge(
             $this->getAttributeNamesDefault(),
-            $this->attributeNames
+            $this->attributeNames ?? []
         );
     }
 }
